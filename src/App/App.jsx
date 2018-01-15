@@ -5,14 +5,15 @@ import Home from '../Home/Home';
 const NotFoundFallback = () => <h1>404</h1>;
 
 const App = () => (
-  <BrowserRouter>
-    <div>
+  <div className='main ui text container'>
+    <h1 className="ui dividing centered header">Voting App</h1>
+    <BrowserRouter>
       <Switch>
         <Route exact path="/" component={ Home } />
         <Route component={ NotFoundFallback } />
       </Switch>
-    </div>
-  </BrowserRouter>
+    </BrowserRouter>
+  </div>
 );
 
 export default App;
