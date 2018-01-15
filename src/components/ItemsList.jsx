@@ -17,12 +17,12 @@ class ItemList extends Component {
         .then(res => res.json())
         .then(items => this.setState({ items, loading: false }))
         .catch();
-    }, 500)
+    }, 1500)
   }
   
   render() {
     return (
-      <div className="ui bottom attached segment divided items">
+      <div className='ui bottom attached segment divided items'>
         { this.state.loading ? <ItemsLoading className='ui segment' /> : ''}
         { this.state.items.map(item => (
           <Item
