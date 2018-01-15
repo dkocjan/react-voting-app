@@ -1,19 +1,20 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import Home from '../Home/Home';
+import ItemList from './ItemList';
+import Menu from './Menu';
 
 const NotFoundFallback = () => <h1>404</h1>;
 
 const App = () => (
-  <div className='main ui text container'>
-    <h1 className="ui dividing centered header">Voting App</h1>
-    <BrowserRouter>
+  <BrowserRouter>
+    <div className='main ui text container'>
+      <Menu />
       <Switch>
-        <Route exact path="/" component={ Home } />
+        <Route exact path="/" component={ ItemList } />
         <Route component={ NotFoundFallback } />
       </Switch>
-    </BrowserRouter>
-  </div>
+    </div>
+  </BrowserRouter>
 );
 
 export default App;

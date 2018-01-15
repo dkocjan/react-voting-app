@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-class Menu extends Component {
-  render() {
-    return (
-      <div className='ui menu'>
-        <a className='item'>Browse</a>
-        <a className='item'>Submit</a>
-        <div className='right menu'>
-          <a className='item'>Sign Up</a>
-          <a className='item'>Help</a>
-        </div>
-      </div>
-    );
-  }
-}
+const Menu = () => (
+  <div className='ui menu'>
+    <Link to='' className='item'>Browse</Link>
+    <Link to='/submit' className='item'>Submit</Link>
+    <div className='right menu'>
+      <Link to='/signup' className='item'>Sign Up</Link>
+      <Link to='/help' className='item'>Help</Link>
+    </div>
+  </div>
+);
 
 export default Menu;
