@@ -22,7 +22,7 @@ class Item extends PureComponent {
           <div className='meta'>
             <span className='stay'>{ this.props.added }</span>
             <Link to={ `/user/${this.props.author}` }>
-              <span>Submitted by: { this.props.author }</span>
+              <span>by: { this.props.author }</span>
               <img
                 src={ `/public/images/avatars/${this.props.author.toLowerCase()}.jpg` }
                 alt={ `${this.props.author} avatar` }
