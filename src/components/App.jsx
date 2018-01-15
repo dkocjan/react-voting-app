@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import ItemList from './ItemList';
+import ItemList from './ItemsList';
 import Menu from './Menu';
 
 const NotFoundFallback = () => <div className='ui bottom attached segment'>404</div>;

@@ -1,47 +1,21 @@
 import React, { PureComponent } from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import ItemImage from './ItemImage';
+import ItemContent from './ItemContent';
 
 class Item extends PureComponent {
-  
-  const;
-  
   render() {
     return (
       <div className='item'>
-        <div className="image">
-          <img
-            src={ `https://picsum.photos/670/500/?image=${this.props.img}` }
-            alt={ this.props.name }
-          />
-        </div>
-        <div className='middle aligned content'>
-          <div className='header'>
-            <Link to={ `/item/${this.props.id}/${this.props.name}` }>{ this.props.name }</Link>
-          </div>
-          <div className='meta'>
-            <span className='stay'>{ this.props.added }</span>
-          </div>
-          <div className='description'>
-            <p>{ this.props.description }</p>
-          </div>
-          <div className='extra'>
-            <Link to={ `/user/${this.props.author}` }>
-              <span>Author: { this.props.author } </span>
-              <img
-                src={ `/public/images/avatars/${this.props.author.toLowerCase()}.jpg` }
-                alt={ `${this.props.author} avatar` }
-                className='ui avatar image'
-              />
-            </Link>
-            <div className='ui right floated labeled button'>
-              <div className='ui button'>
-                <i className='heart red icon' />
-              </div>
-              <a className='ui basic left pointing label'>{this.props.votes} likes</a>
-            </div>
-          </div>
-        </div>
+        <ItemImage className="image" img={this.props.img} />
+        <ItemContent
+          id={this.props.id}
+          name={this.props.name}
+          description={this.props.description}
+          author={this.props.author}
+          added={this.props.added}
+          votes={this.props.votes}
+        />
       </div>
     );
   }
