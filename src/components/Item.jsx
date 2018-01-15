@@ -7,7 +7,7 @@ class Item extends PureComponent {
     return (
       <div className='item'>
         <div className="image">
-          <img src='https://picsum.photos/640/480/?random' alt={ this.props.name } />
+          <img src={`https://picsum.photos/670/500/?image=${Math.floor(Math.random() * 1085)}`} alt={ this.props.name } />
         </div>
         <div className='middle aligned content'>
           <div className='description'>

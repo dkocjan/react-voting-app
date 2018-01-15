@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import ItemList from './ItemList';
 import Menu from './Menu';
 
-const NotFoundFallback = () => <h1>404</h1>;
+const NotFoundFallback = () => <div className='ui bottom attached segment'>404</div>;
 
 const App = () => (
   <BrowserRouter>
