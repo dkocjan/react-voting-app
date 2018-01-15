@@ -10,7 +10,7 @@ const App = () => (
     <div className='main ui text container'>
       <Menu />
       <Switch>
-        <Route exact path="/" component={ ItemList } />
+        <Route exact path='/' component={ ItemList } />
         <Route component={ NotFoundFallback } />
       </Switch>
     </div>
