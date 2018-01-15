@@ -6,10 +6,12 @@ const NotFoundFallback = () => <h1>404</h1>;
 
 const App = () => (
   <BrowserRouter>
+    <div>
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route component={NotFoundFallback} />
+        <Route exact path="/" component={ Home } />
+        <Route component={ NotFoundFallback } />
       </Switch>
+    </div>
   </BrowserRouter>
 );
 

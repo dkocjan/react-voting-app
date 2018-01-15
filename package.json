@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "React Voting App",
   "main": "src/index.jsx",
-  "repository": "https://github.com/dkocjan/react-boilerplate.git",
+  "repository": "https://github.com/dkocjan/react-voting-app",
   "author": "dkocjan",
   "license": "MIT",
   "scripts": {
