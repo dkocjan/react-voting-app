@@ -17,7 +17,7 @@ class ItemList extends Component {
         .then(res => res.json())
         .then(items => this.setState({ items, loading: false }))
         .catch();
-    }, 1500)
+    }, 500)
   }
   
   render() {
