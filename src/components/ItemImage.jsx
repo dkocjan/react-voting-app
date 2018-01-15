@@ -6,7 +6,7 @@ class ItemImage extends PureComponent {
     return (
       <div className='image'>
         <img
-          src={ `https://picsum.photos/670/500/?image=${this.props.img}` }
+          src={ this.props.imgUrl }
           alt={ this.props.name }
         />
       </div>
@@ -15,8 +15,8 @@ class ItemImage extends PureComponent {
 }
 
 ItemImage.propTypes = {
-  img:         PropTypes.number.isRequired,
-  name:         PropTypes.string.isRequired,
+  imgUrl: PropTypes.string.isRequired,
+  name:   PropTypes.string.isRequired,
 };
 
 export default ItemImage;

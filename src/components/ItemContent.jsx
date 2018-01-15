@@ -19,7 +19,7 @@ class ItemContent extends PureComponent {
           <Link to={ `/user/${this.props.author}` }>
             <span>Author: { this.props.author } </span>
             <img
-              src={ `/public/images/avatars/${this.props.author.toLowerCase()}.jpg` }
+              src={ `/public/img/avatars/${this.props.author.toLowerCase()}.jpg` }
               alt={ `${this.props.author} avatar` }
               className='ui avatar image'
             />
