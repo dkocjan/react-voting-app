@@ -1,14 +1,15 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import ItemImage from './ItemImage';
 import ItemContent from './ItemContent';
+import ItemImage from './ItemImage';
 
 class Item extends PureComponent {
   render() {
     return (
       <div className='item'>
-        <ItemImage className="image" img={this.props.img} />
+        <ItemImage name={this.props.name} img={this.props.img} />
         <ItemContent
+          className='middle aligned content'
           id={this.props.id}
           name={this.props.name}
           description={this.props.description}

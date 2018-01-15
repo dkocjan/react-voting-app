@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-class ItemContent extends Component {
+class ItemContent extends PureComponent {
   render() {
     return (
       <div className='middle aligned content'>
