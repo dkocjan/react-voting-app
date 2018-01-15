@@ -9,7 +9,7 @@ class ItemList extends Component {
   
   render() {
     return (
-      <div className='ui bottom attached segment items'>
+      <div className='ui bottom attached segment divided items'>
         <Item
           id={3}
           name='Post Test 3'

@@ -21,23 +21,25 @@ class Item extends PureComponent {
           </div>
           <div className='meta'>
             <span className='stay'>{ this.props.added }</span>
+          </div>
+          <div className='description'>
+            <p>{ this.props.description }</p>
+          </div>
+          <div className='extra'>
             <Link to={ `/user/${this.props.author}` }>
-              <span>by: { this.props.author }</span>
+              <span>Author: { this.props.author } </span>
               <img
                 src={ `/public/images/avatars/${this.props.author.toLowerCase()}.jpg` }
                 alt={ `${this.props.author} avatar` }
                 className='ui avatar image'
               />
             </Link>
-          </div>
-          <div className='description'>
-            <p>{ this.props.description }</p>
-          </div>
-          <div className='extra'>
-            <span>
-              <i className='green check icon' />
-              { this.props.votes } votes
-            </span>
+            <div className='ui right floated labeled button'>
+              <div className='ui button'>
+                <i className='heart red icon' />
+              </div>
+              <a className='ui basic left pointing label'>{this.props.votes} likes</a>
+            </div>
           </div>
         </div>
       </div>
