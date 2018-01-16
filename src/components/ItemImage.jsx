@@ -4,11 +4,8 @@ import PropTypes from 'prop-types';
 class ItemImage extends PureComponent {
   render() {
     return (
-      <div className='image'>
-        <img
-          src={ this.props.imgUrl }
-          alt={ this.props.name }
-        />
+      <div className="image">
+        <img src={this.props.imgUrl} alt={this.props.name} />
       </div>
     );
   }
@@ -16,7 +13,7 @@ class ItemImage extends PureComponent {
 
 ItemImage.propTypes = {
   imgUrl: PropTypes.string.isRequired,
-  name:   PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired
 };
 
 export default ItemImage;
