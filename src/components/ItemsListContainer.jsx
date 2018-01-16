@@ -8,6 +8,8 @@ class ItemsListContainer extends Component {
       items: [],
       loading: true,
     };
+
+    this.handleSortItems = this.handleSortItems.bind(this);
   }
 
   componentDidMount() {
@@ -19,8 +21,30 @@ class ItemsListContainer extends Component {
     }, 800);
   }
 
+  // todo
+  handleSortItems() {
+    // todo
+    this.setState({
+      items: this.state.items.sort((a, b) => b.votes - a.votes),
+    });
+  }
+  // todo
+  handleSearchItems() {
+    // todo
+    this.setState({
+      items: this.state.items.sort((a, b) => b.votes - a.votes),
+    });
+  }
+
   render() {
-    return <ItemsList items={this.state.items} loading={this.state.loading} />;
+    return (
+      <ItemsList
+        items={this.state.items}
+        loading={this.state.loading}
+        handleSortItems={this.handleSortItems}
+        handleSearchItems={this.handleSearchItems}
+      />
+    );
   }
 }
 

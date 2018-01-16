@@ -10,12 +10,6 @@ const Menu = () => (
       Submit
     </Link>
     <div className="right menu">
-      <div className="item">
-        <div className="ui icon input">
-          <input placeholder="Search..." type="text" />
-          <i className="search link icon" />
-        </div>
-      </div>
       <Link to="/signup" className="item">
         Sign Up
       </Link>
