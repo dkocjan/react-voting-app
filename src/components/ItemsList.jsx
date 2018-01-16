@@ -7,19 +7,22 @@ class ItemList extends PureComponent {
   render() {
     return (
       <div className="ui bottom attached segment divided items">
-        {this.props.loading ? <ItemsLoading className="ui segment" /> : ''}
-        {this.props.items.map(item => (
-          <Item
-            key={item.id}
-            id={item.id}
-            name={item.name}
-            description={item.description}
-            author={item.author}
-            added={item.added}
-            votes={item.votes}
-            imgUrl={item.imgUrl}
-          />
-        ))}
+        {this.props.loading ? (
+          <ItemsLoading />
+        ) : (
+          this.props.items.map(item => (
+            <Item
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              description={item.description}
+              author={item.author}
+              added={item.added}
+              votes={item.votes}
+              imgUrl={item.imgUrl}
+            />
+          ))
+        )}
       </div>
     );
   }

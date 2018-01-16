@@ -5,7 +5,7 @@ class ItemImage extends PureComponent {
   render() {
     return (
       <div className="image">
-        <img src={this.props.imgUrl} alt={this.props.name} />
+        <img src={this.props.imgUrl} alt={this.props.title} />
       </div>
     );
   }
@@ -13,7 +13,7 @@ class ItemImage extends PureComponent {
 
 ItemImage.propTypes = {
   imgUrl: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
 };
 
 export default ItemImage;

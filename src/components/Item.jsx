@@ -7,11 +7,10 @@ class Item extends PureComponent {
   render() {
     return (
       <div className="item">
-        <ItemImage name={this.props.name} imgUrl={this.props.imgUrl} />
+        <ItemImage title={this.props.title} imgUrl={this.props.imgUrl} />
         <ItemContent
-          className="middle aligned content"
           id={this.props.id}
-          name={this.props.name}
+          title={this.props.title}
           description={this.props.description}
           author={this.props.author}
           added={this.props.added}
@@ -24,7 +23,7 @@ class Item extends PureComponent {
 
 Item.propTypes = {
   id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   added: PropTypes.string.isRequired,

@@ -7,7 +7,7 @@ class ItemContent extends PureComponent {
     return (
       <div className="middle aligned content">
         <div className="header">
-          <Link to={`/item/${this.props.id}/${this.props.name}`}>{this.props.name}</Link>
+          <Link to={`/item/${this.props.id}/${this.props.title}`}>{this.props.title}</Link>
         </div>
         <div className="meta">
           <span className="stay">{this.props.added}</span>
@@ -38,11 +38,11 @@ class ItemContent extends PureComponent {
 
 ItemContent.propTypes = {
   id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   added: PropTypes.string.isRequired,
-  votes: PropTypes.number.isRequired
+  votes: PropTypes.number.isRequired,
 };
 
 export default ItemContent;

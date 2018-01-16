@@ -16,7 +16,7 @@ class ItemsListContainer extends Component {
         .then(res => res.json())
         .then(items => this.setState({ items, loading: false }))
         .catch();
-    }, 500);
+    }, 800);
   }
 
   render() {
