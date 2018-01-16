@@ -1,30 +1,14 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
+import PropTypes from 'prop-types';
 import Item from './Item';
 import ItemsLoading from './ItemsLoading';
 
-class ItemList extends Component {
-  constructor() {
-    super();
-    this.state = {
-      items: [],
-      loading: true,
-    };
-  }
-
-  componentDidMount() {
-    setTimeout(() => {
-      fetch('/public/items.json')
-        .then(res => res.json())
-        .then(items => this.setState({ items, loading: false }))
-        .catch();
-    }, 100);
-  }
-
+class ItemList extends PureComponent {
   render() {
     return (
       <div className="ui bottom attached segment divided items">
-        {this.state.loading ? <ItemsLoading className="ui segment" /> : ''}
-        {this.state.items.map(item => (
+        {this.props.loading ? <ItemsLoading className="ui segment" /> : ''}
+        {this.props.items.map(item => (
           <Item
             key={item.id}
             id={item.id}
@@ -40,5 +24,10 @@ class ItemList extends Component {
     );
   }
 }
+
+ItemList.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.object).isRequired,
+  loading: PropTypes.bool.isRequired,
+};
 
 export default ItemList;
